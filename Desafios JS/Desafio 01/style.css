@@ -1,0 +1,17 @@
+* {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: black;
+    color: bisque;
+    padding: 50px;
+}
+
+span {
+    color: brown;
+    text-shadow: 5px;
+
+}

@@ -129,9 +129,40 @@ switch (estado) {
         console.log('ainda nao cadastrado')
 }
 
-*/
-
-for (i = 1; i <= 1000000; ++i) {
+for (i = 10; i <= 20; ++i) {
     console.log('Numero ' + i)
 }
 
+let i = 1
+
+while (i <= 10) {
+    console.log('Numero ' + i)
+    i++
+}
+
+let i = 1
+do {
+    console.log('Numero ' + i)
+    i++
+} while (i <=10)
+
+
+// for in
+const myCar = {
+    model: 'BMW',
+    year: 2023,
+    km: 68000
+}
+
+for (let i in myCar) // in busca diretamente o index de um objeto, ou dado do objeto
+    console.log(i, myCar[i])
+
+
+
+// for of
+const myFriends = [ 'alex', 'silvia', 'maria', 'jose']
+    
+for (let i of myFriends) // of busca diretamente o valor do index em uma array
+    console.log(i)
+
+*/
