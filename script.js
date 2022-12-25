@@ -74,11 +74,64 @@ function radar(analise) {
 let velocidade = radar(111);
 console.log(velocidade);
 
-*/
 
-function verificaIdade(idade) {
-    return idade > 16
+
+// Operadores lógicos
+
+// && um e outro
+
+// || um ou outro
+
+// ! não
+
+function catraca(ingresso) {
+    return ingresso == true ? 'Liberado':'Dirija-se a bilheteria'
 }
 
-let verificado = idade(17)
-console.log(verificado)
+let liberacao =  catraca(false)
+console.log(liberacao);
+
+// Operadores logicos com strings
+let corCliente = undefined
+let corEstoque = 'Preta'
+let corVendida = corCliente || corEstoque
+
+console.log('Carro disponivel na cor ' + corVendida);
+
+
+// Declarações condicionais
+function msg(velocidade){
+    if (velocidade < 40){
+        console.log('Você está dirigindo muito devagar')
+    } else if (velocidade >= 41 && velocidade <= 110 ){
+        console.log('Sua velocidade está ótima')
+    } else {
+        console.log('Você está dirigindo muito rápido')
+    }
+}
+console.log(msg(50));
+
+
+// switch / case -> encontra e troca um valor
+let estado = ''
+
+switch (estado) {
+    case 'sp':
+        console.log('São Paulo')
+        break
+    case 'mg':
+        console.log('Minas Gerais')
+        break
+    case 'ba':
+        console.log('Bahia')
+        break
+    default:
+        console.log('ainda nao cadastrado')
+}
+
+*/
+
+for (i = 1; i <= 1000000; ++i) {
+    console.log('Numero ' + i)
+}
+
