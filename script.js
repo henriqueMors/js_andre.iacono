@@ -165,4 +165,69 @@ const myFriends = [ 'alex', 'silvia', 'maria', 'jose']
 for (let i of myFriends) // of busca diretamente o valor do index em uma array
     console.log(i)
 
+
+// Criando OBJETOS
+let livro = {
+    tituloLivro: 'homem-aranha',
+    autorLivro: 'stan lee',
+    paginasLivro: 100,
+    precoLivro: 20.00,
+    capitulosLivro: {
+        cap1: 'cidade cinza',
+        cap2: 'um novo vilao',
+        cap3: 'tentaculos me mordao'
+    }
+}
+
+console.log(livro)
+
+
+// colocando uma função dentro de um objeto
+let livro = {
+    tituloLivro: 'homem-aranha',
+    autorLivro: 'stan lee',
+    paginasLivro: 100,
+    precoLivro: 20.00,
+    capitulosLivro: {
+        cap1: 'cidade cinza',
+        cap2: 'um novo vilao',
+        cap3: 'tentaculos me mordao'
+    },
+    imprimindo: function() {
+        console.log('imprimindo...')
+    }
+}
+
+livro.imprimindo()
+
+// Factory
+function criaLivro(titulo, autor, paginas) {
+    let livro = {
+        tituloLivro: titulo,
+        autorLivro: autor,
+        paginasLivro: paginas, 
+    }
+    return livro
+}
+
+let livro1 = criaLivro('Homem-Aranha', 'Stan Lee', 400)
+let livro2 = criaLivro('Batman', 'Sei Lá', 100)
+livro1.corcapa = 'Roxa' // Adicionando elementos ao obejto
+
+console.log(livro1)
+
 */
+
+//constructor
+function Livro(titulo, autor, paginas) { // no caso do constructor, por convenção, a primeira letra da função é maiuscula
+    this.tituloLivro = titulo;
+    this.autorLivro = autor;
+    this.paginasLivro = paginas 
+    }
+
+
+let livro1 = new Livro('Homem-Aranha', 'Stan Lee', 400)
+let livro2 = new Livro('Batman', 'Sei Lá', 100)
+
+
+console.log(livro2)
