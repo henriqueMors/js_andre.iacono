@@ -216,7 +216,6 @@ livro1.corcapa = 'Roxa' // Adicionando elementos ao obejto
 
 console.log(livro1)
 
-*/
 
 //constructor
 function Livro(titulo, autor, paginas) { // no caso do constructor, por convenção, a primeira letra da função é maiuscula
@@ -231,3 +230,13 @@ let livro2 = new Livro('Batman', 'Sei Lá', 100)
 
 
 console.log(livro2)
+
+*/
+
+// Manipulando arrays
+let num = [ 7, 8, 9 ]
+num.push(10, 11, 12) // adiciona no fim
+num.unshift(0, 1, 2, 3) // adiciona no começo
+num.splice(4, 6, 4, 5, 6) // adiciona onde informado o index
+
+console.log(num)
