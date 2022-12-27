@@ -339,7 +339,6 @@ function preco(valor, desconto) {
 let total = preco(92, 10)
 console.log(total)
 
-
 */
 
 function soma() {
@@ -348,4 +347,6 @@ function soma() {
     total += valor
     return total
 }
-console.log(soma(1010, 50, 600))
+console.log(soma(1, 1, 1, 1,))
+
+
