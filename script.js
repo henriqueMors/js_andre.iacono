@@ -323,5 +323,29 @@ let tempoPositive = tempLondon.filter(value => value >= 0)
 
 console.log(tempoPositive)
 
+// FUNCTIONS
+
+function movie(){
+    console.log('matrix');
+    
+}
+movie()
+
+
+function preco(valor, desconto) {
+    return valor - (valor * desconto / 100)
+}
+
+let total = preco(92, 10)
+console.log(total)
+
+
 */
 
+function soma() {
+    let total = 0
+    for (let valor of arguments)
+    total += valor
+    return total
+}
+console.log(soma(1010, 50, 600))
