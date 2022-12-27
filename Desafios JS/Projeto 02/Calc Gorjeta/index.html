@@ -9,23 +9,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Quick Tip</title>
+    <title>Gorjeteando</title>
   </head>
   <body>
-    <main >
-      <h1>Quick Tip</h1>
+    <main oninput="update()">
+      <h1>Gorjeta</h1>
       <section>
         <div class="bill">
-          <label for="yourBill">Bill</label>
-          <input 
-            type="number" 
-            placeholder="Your bill" 
-            id="yourBill"  />
+          <label for="yourBill">Valor</label>
+          <input type="number" placeholder="Your bill" id="yourBill"/>
         </div>
         <div>
           <div class="space-between">
-            <label for="">Select tip</label
-            ><span id="tipPercent">0%</span>
+            <label for="tipInput">Select tip</label>
+            <span id="tipPercent"></span>
           </div>
           <input type="range" value="0" id="tipInput" class="range" />
         </div>
