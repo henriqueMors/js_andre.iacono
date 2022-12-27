@@ -1,3 +1,8 @@
+function formatNumber(decimal) {
+    decimal = decimal.toFixed(2)
+    return 'R$ ' + decimal
+}
+
 function update() {
     let valor = Number(document.getElementById('yourBill').value)
     let porcentagem = Number(document.getElementById('tipInput').value)
@@ -8,10 +13,10 @@ function update() {
     let qtPes = total / split
 
     document.getElementById('tipPercent').innerHTML = porcentagem + '%'
-    document.getElementById('tipValue').innerHTML = 'R$ ' + gVal
-    document.getElementById('totalWithTip').innerHTML = 'R$ ' + total
+    document.getElementById('tipValue').innerHTML = formatNumber(gVal)
+    document.getElementById('totalWithTip').innerHTML = formatNumber(total)
 
     document.getElementById('splitValue').innerHTML = split
-    document.getElementById('billEach').innerHTML = 'R$ ' + qtPes
+    document.getElementById('billEach').innerHTML = formatNumber(qtPes)
 
 }
