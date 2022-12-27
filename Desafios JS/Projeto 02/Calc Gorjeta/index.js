@@ -1,6 +1,13 @@
 function formatNumber(decimal) {
+    decimal = Math.ceil(decimal * 100) / 100
     decimal = decimal.toFixed(2)
     return 'R$ ' + decimal
+}
+
+function nPessoas(quantidade) {
+    if (quantidade == 1) return quantidade + ' pessoa'
+    return quantidade + ' pessoas'
+
 }
 
 function update() {
@@ -16,7 +23,7 @@ function update() {
     document.getElementById('tipValue').innerHTML = formatNumber(gVal)
     document.getElementById('totalWithTip').innerHTML = formatNumber(total)
 
-    document.getElementById('splitValue').innerHTML = split
+    document.getElementById('splitValue').innerHTML = nPessoas(split)
     document.getElementById('billEach').innerHTML = formatNumber(qtPes)
 
 }
