@@ -1,5 +1,4 @@
 /*
-
 console.log('JS tá aqui');
 
 // criando um objeto
@@ -231,12 +230,98 @@ let livro2 = new Livro('Batman', 'Sei Lá', 100)
 
 console.log(livro2)
 
-*/
-
 // Manipulando arrays
 let num = [ 7, 8, 9 ]
 num.push(10, 11, 12) // adiciona no fim
 num.unshift(0, 1, 2, 3) // adiciona no começo
-num.splice(4, 6, 4, 5, 6) // adiciona onde informado o index
+num.splice(4, 0, 4, 5, 6) // adiciona onde informado o index
 
-console.log(num)
+console.log(num.indexOf(9)) // ou console.log(num.includes(9))
+
+
+ // localizar itens em uma array
+let carro = [
+    {marca: 'fiat', modelo: 'uno', ano: 2019, km: 120000},
+    {marca: 'ford', modelo: 'ranger', ano: 2020, km: 1200},
+    {marca: 'Hyunday', modelo: 'i30', ano: 2012, km: 68000},
+    {marca: 'mercedes', modelo: 'C180', ano: 2023, km: 0}
+]
+
+console.log(carro.find(function(carro) { //FIND é para uma array com varias referencias
+    return carro.marca == 'mercedes'
+        }
+    )
+);
+
+
+
+// ARROW FUNCTION
+
+let carro = [
+    {marca: 'fiat', modelo: 'uno', ano: 2019, km: 120000},
+    {marca: 'ford', modelo: 'ranger', ano: 2020, km: 1200},
+    {marca: 'Hyunday', modelo: 'i30', ano: 2012, km: 68000},
+    {marca: 'mercedes', modelo: 'C180', ano: 2023, km: 0}
+]
+
+console.log(carro.find(carro => carro.marca == 'mercedes'
+    )
+);
+
+
+// ARRAYS
+let amigos = ['jose', 'joao', "judas", 'paulo', 'andre', 'bexiga', 'cavalo']
+
+amigos[2] = 'nicolau' //substituir um valor
+amigos.push('homer') // add no final da array
+amigos.unshift('galileu') //add no inicio
+amigos.splice(1, 0, 'helio', 'oscar')
+console.log(amigos)
+console.log(amigos.indexOf('oscar')) // localiza em qual index se encontra
+console.log(amigos.includes('helio')) // retorna true ou false para saber se tem um valor na array
+amigos.push() //remove o ultimo item
+amigos.shift() //remove o primeiro item
+amigos = [] // limpa todos os itens
+amigos.length = 0 // limpa todos os itens
+amigos.splice(0, amigos.length) //remove todos os itens
+console.log(amigos)
+
+// concat
+let letras = ['a', 'b', 'c']
+let numeros = [1, 2, 3]
+
+todos = numeros.concat(letras) // junta as duas variaveis
+metade = todos.slice(2, 4) //pega a metade da juncao das variaveis
+console.log(todos)
+console.log(metade)
+
+
+// join
+let clientes = ['jose', 'joao', "judas", 'paulo', 'andre', 'bexiga', 'cavalo']
+console.log(clientes)
+
+clientes.sort()// organiza por ordem alfabetica
+clientes.reverse() // ordem reversa
+let clientesJoin = clientes.join (' / ') // add algo entre os itens da array
+
+console.log(clientesJoin)
+
+
+//verificando elementos (usei arrow function)
+
+let tempLondon = [18, 12, 8, 2]
+
+let tempoPositive = tempLondon.every(value => value >= 0)
+
+console.log(tempoPositive)
+
+
+//filtrando itens
+let tempLondon = [18, 12, -8, 2]
+
+let tempoPositive = tempLondon.filter(value => value >= 0)
+
+console.log(tempoPositive)
+
+*/
+
